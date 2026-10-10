@@ -1,0 +1,128 @@
+5-3 初めてのSQL（演習問題）
+
+【問題1】
+
+■ SQL文
+SELECT title, publication_year
+FROM books
+WHERE author = '田中 一郎';
+
+■ 実行結果
+    title    | publication_year
+-------------+-----------------
+ 過去のSQL   | 1999
+ 現在のSQL   | 2005
+(2 行)
+
+
+【問題2】
+
+■ SQL文（2-1）
+INSERT INTO books (title, author, publication_year, genre)
+VALUES ('SQLの応用', '鈴木 三郎', 2019, '技術書');
+
+SELECT *
+FROM books
+WHERE title = 'SQLの応用';
+
+■ 実行結果
+INSERT 0 1
+
+title    | author    | publication_year | genre  | loan_date
+---------+-----------+------------------+--------+----------
+SQLの応用 | 鈴木 三郎 | 2019             | 技術書 |
+(1 行)
+
+
+■ SQL文（2-2）
+INSERT INTO books (title, author, publication_year, genre)
+VALUES ('データベース設計論', '高橋 美香', 2022, '技術書');
+
+SELECT *
+FROM books
+WHERE title = 'データベース設計論';
+
+■ 実行結果
+INSERT 0 1
+
+title              | author    | publication_year | genre  | loan_date
+-------------------+-----------+------------------+--------+----------
+データベース設計論 | 高橋 美香 | 2022             | 技術書 |
+(1 行)
+
+
+【問題3】
+
+■ SQL文
+DELETE FROM books
+WHERE author = '山田 花子';
+
+SELECT * FROM books;
+
+SELECT COUNT(*) FROM books;
+
+■ 実行結果
+DELETE 1
+
+title                | author    | publication_year | genre  | loan_date
+---------------------+-----------+------------------+--------+-----------
+未来のSQL            | 田中 太郎 | 2023             | 技術書 | 2023-10-01
+過去のSQL            | 田中 一郎 | 1999             | 技術書 | 1999-05-15
+現在のSQL            | 田中 一郎 | 2005             | 小説   | 2005-07-20
+SQLの基礎            | 佐藤 次郎 | 2001             | 技術書 | 2001-11-25
+恋するデータベース   | 高橋 美香 | 2015             | 小説   | 2015-03-14
+プログラマーの恋     | 森田 健一 | 2020             | 小説   | 2020-12-05
+(6 行)
+
+count
+-----
+6
+(1 行)
+
+
+【問題4】
+
+■ SQL文
+UPDATE books
+SET title = 'SQL入門'
+WHERE title = '未来のSQL';
+
+SELECT *
+FROM books
+WHERE title = 'SQL入門';
+
+■ 実行結果
+UPDATE 1
+
+title   | author    | publication_year | genre  | loan_date
+--------+-----------+------------------+--------+-----------
+SQL入門 | 田中 太郎 | 2023             | 技術書 | 2023-10-01
+(1 行)
+
+
+■ 追加確認
+UPDATE books
+SET title = 'テスト'
+WHERE title = '存在しない本のタイトル';
+
+■ 実行結果
+UPDATE 0
+
+
+【問題5】
+
+■ SQL文
+SELECT *
+FROM books
+WHERE publication_year >= 2000
+AND genre = '小説'
+ORDER BY publication_year DESC;
+
+■ 実行結果
+title                | author    | publication_year | genre | loan_date
+---------------------+-----------+------------------+-------+-----------
+プログラマーの恋     | 森田 健一 | 2020             | 小説  | 2020-12-05
+恋するデータベース   | 高橋 美香 | 2015             | 小説  | 2015-03-14
+SQLの冒険            | 山田 花子 | 2010             | 小説  | 2010-09-10
+現在のSQL            | 田中 一郎 | 2005             | 小説  | 2005-07-20
+(4 行)
