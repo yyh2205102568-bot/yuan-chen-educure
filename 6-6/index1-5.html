@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テックカンファレンス2026</title>
+</head>
+<body>
+
+    <!-- 页面的头部 -->
+    <header id="home">
+        <h1>テックカンファレンス2026</h1>
+
+        <!-- 导航菜单 -->
+        <nav>
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#speakers">スピーカー</a></li>
+                <li><a href="#registration">登録</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主要内容 -->
+    <main>
+
+        <!-- 活动介绍 -->
+        <article>
+            <h2>イベント概要</h2>
+            <p>このカンファレンスでは最新の技術トレンドを紹介します。</p>
+        </article>
+
+        <!-- 补充信息 -->
+        <aside>
+            <p>参加者にはオリジナルのノベルティが用意されています。</p>
+        </aside>
+
+        <!-- 会议日程表 -->
+        <table id="speakers" border="1">
+            <tr>
+                <th>セッション</th>
+                <th>スピーカー</th>
+                <th>時間</th>
+            </tr>
+
+            <tr>
+                <td rowspan="2">基調講演</td>
+                <td>Dr. Tech</td>
+                <td>10:00～11:00</td>
+            </tr>
+
+            <tr>
+                <td>Dr. Mac</td>
+                <td>11:30～12:30</td>
+            </tr>
+
+            <tr>
+                <td>パネルディスカッション</td>
+                <td>Dr. Tech</td>
+                <td>13:30～14:30</td>
+            </tr>
+        </table>
+
+        <!-- 报名表单 -->
+        <form id="registration" action="/submit" method="post">
+
+            <!-- 姓名 -->
+            <p>
+                <label for="username">名前:</label>
+                <input type="text" id="username" name="username">
+            </p>
+
+            <!-- 邮箱 -->
+            <p>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email">
+            </p>
+
+            <!-- 性别 -->
+            <p>
+                性別:
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">男性</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">女性</label>
+            </p>
+
+            <!-- 感兴趣的领域 -->
+            <p>
+                興味のある分野:
+                <input type="checkbox" id="technology" name="interest" value="technology">
+                <label for="technology">技術</label>
+
+                <input type="checkbox" id="art" name="interest" value="art">
+                <label for="art">芸術</label>
+
+                <input type="checkbox" id="science" name="interest" value="science">
+                <label for="science">科学</label>
+            </p>
+
+            <!-- 国家 -->
+            <p>
+                <label for="country">国:</label>
+                <select id="country" name="country">
+                    <option value="japan">日本</option>
+                    <option value="america">アメリカ</option>
+                    <option value="uk">イギリス</option>
+                </select>
+            </p>
+
+            <!-- 评论 -->
+            <p>
+                <label for="comment">コメント:</label>
+            </p>
+
+            <p>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+            </p>
+
+            <!-- 发送按钮 -->
+            <p>
+                <button type="submit">送信</button>
+            </p>
+
+        </form>
+
+    </main>
+
+    <!-- 页面底部 -->
+    <footer>
+        <p>&copy; 2026 テックカンファレンス. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
