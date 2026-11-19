@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>趣味についてのアンケート</title>
+</head>
+<body>
+
+    <h1>趣味についてのアンケート</h1>
+
+    <form action="/submit" method="post">
+
+        <p>
+            <label for="username">名前:</label>
+            <input type="text" id="username" name="username">
+        </p>
+
+        <p>
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email">
+        </p>
+        <p>
+    性別:
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">男性</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">女性</label>
+</p>
+<p>
+    趣味:
+    <input type="checkbox" id="reading" name="hobby" value="reading">
+    <label for="reading">読書</label>
+
+    <input type="checkbox" id="sports" name="hobby" value="sports">
+    <label for="sports">スポーツ</label>
+
+    <input type="checkbox" id="music" name="hobby" value="music">
+    <label for="music">音楽</label>
+</p>
+<p>
+    <label for="country">国:</label>
+    <select id="country" name="country">
+        <option value="japan">日本</option>
+        <option value="america">アメリカ</option>
+        <option value="uk">イギリス</option>
+    </select>
+</p>
+
+<p>
+    <label for="comment">コメント:</label><br>
+    <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+</p>
+
+<p>
+    <button type="submit">送信</button>
+</p>
+    </form>
+
+</body>
+</html>
