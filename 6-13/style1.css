@@ -1,0 +1,27 @@
+
+/* bodyの文字サイズを18pxに設定 */
+body {
+    font-size: 18px;
+}
+
+/* h1を中央揃えにし、文字色を#333に設定 */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* h2の文字サイズをbodyの1.75倍に設定 */
+h2 {
+    font-size: 1.75em;
+}
+
+/* importantクラスの文字を太字と赤色に設定 */
+.important {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/* すべての段落の行間を1.5に設定 */
+p {
+    line-height: 1.5;
+}

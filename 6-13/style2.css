@@ -1,0 +1,26 @@
+
+/* メニューのリストマーカーを非表示にする */
+.menu {
+    list-style: none;
+
+    /* Flexboxで横並びにする */
+    display: flex;
+
+    /* メニュー項目の間隔を20pxにする */
+    gap: 20px;
+
+    /* 余白を0にする */
+    padding: 0;
+    margin: 0;
+}
+
+/* リンクの文字色と下線を設定する */
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+/* 特徴リストのマーカーを白丸にする */
+.features {
+    list-style-type: circle;
+}

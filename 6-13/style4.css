@@ -1,0 +1,30 @@
+
+/* ページ全体の背景色を設定 */
+body {
+    background-color: #f0f0f0;
+}
+
+/* ヘッダーの背景画像を設定 */
+.page-header {
+    background-image: url("okumono_chess40.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 見出しを中央揃えにする */
+h1 {
+    text-align: center;
+}
+
+/* 画像ボックスのデザイン */
+.image-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* 画像のサイズを調整 */
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,21 @@
+
+/* コンテナの最大幅を800pxに設定し、中央揃えにする */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ボックスのスタイルを設定する */
+.box {
+    /* 内側の余白を20pxに設定 */
+    padding: 20px;
+
+    /* 2pxの実線の枠線を設定 */
+    border: 2px solid #ddd;
+
+    /* ボックス同士の間隔を30pxに設定 */
+    margin-bottom: 30px;
+
+    /* 背景色を設定 */
+    background-color: #f9f9f9;
+}

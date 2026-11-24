@@ -1,0 +1,70 @@
+
+/* ページ全体の背景色を設定 */
+body {
+    background-color: #f5f5f5;
+}
+
+/* h1の文字色を紺色に設定 */
+h1 {
+    color: navy;
+}
+
+/* ナビゲーションを横並びに設定 */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 20px;
+}
+
+/* リンクの文字色と下線を設定 */
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* マウスを乗せたときの文字色 */
+a:hover {
+    color: #ff0000;
+}
+
+/* ゲームカードを3列に配置 */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ゲームカードのデザイン */
+.game-card {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+/* 説明文のスタイル */
+.description {
+    color: #666;
+    font-size: 14px;
+}
+
+/* フッターを中央揃えにする */
+footer {
+    text-align: center;
+}
+
+/* 画面幅768px以下では2列にする */
+@media (max-width: 768px) {
+    .game-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 画面幅480px以下では1列にする */
+@media (max-width: 480px) {
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+}
